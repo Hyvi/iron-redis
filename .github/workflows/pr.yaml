@@ -9,6 +9,7 @@ jobs:
     - uses: hazcod/action-golangci-lint@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
+        golangci-lint-flags: "-v" 
         directory: healthcheck
 
   dockerfilelint:
