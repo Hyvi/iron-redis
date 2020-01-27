@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2.0.0
-    - uses: Hyvi/action-golangci-lint@master
+    - uses: reviewdog/action-golangci-lint@v1.1.6
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         golangci-lint-flags: "-v healthcheck"
