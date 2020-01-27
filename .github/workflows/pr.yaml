@@ -6,11 +6,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2.0.0
-    - uses: hazcod/action-golangci-lint@master
+    - uses: Hyvi/action-golangci-lint@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        golangci-lint-flags: "-v" 
-        directory: healthcheck
+        golangci-lint-flags: "-v healthcheck"
 
   dockerfilelint:
     name: dockerfile lint
